@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task List</h1>
+        <ul class="list-group">
+            {% for task in tasks %}
+            <li class="list-group-item"><a href="{% url 'task_detail' task.id %}">{{ task.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
